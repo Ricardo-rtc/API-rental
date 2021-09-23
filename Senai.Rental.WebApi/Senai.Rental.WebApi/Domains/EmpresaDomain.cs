@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace Senai.Rental.WebApi.Domains
 {
-    public class ClientesDomain
+    public class EmpresaDomain
     {
+        public int IdEmpresa { get; set; }
+        public string Nome { get; set; }
     }
 }
