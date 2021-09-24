@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "qfw7tZfk9AeWa4NGZWOw7cdgo5Dbp4a+HxKrW6CeINys8VK/+OnnGgK6lpP+fX9Y2/BWC79TSOnbUQOG4GEAsw==",
+  "dgSpecHash": "+QaTCVQAqlrU1c6yLrlaYsKzzHCe39pAIdXIH1P5lMo9iaENhubvi9jBo8RCUCMnl6WUuhpaKyPiHU+1DxWANg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fic\\Desktop\\Ricardo\\API-rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Ricardo\\Desktop\\SENAI\\API-rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ricardo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ricardo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
