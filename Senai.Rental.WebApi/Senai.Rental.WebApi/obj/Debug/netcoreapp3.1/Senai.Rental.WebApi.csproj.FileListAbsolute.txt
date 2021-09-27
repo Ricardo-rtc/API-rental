@@ -46,3 +46,17 @@ C:\Users\Ricardo\Desktop\SENAI\API-rental\Senai.Rental.WebApi\Senai.Rental.WebAp
 C:\Users\Ricardo\Desktop\SENAI\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.dll
 C:\Users\Ricardo\Desktop\SENAI\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.pdb
 C:\Users\Ricardo\Desktop\SENAI\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.genruntimeconfig.cache
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.csproj.CopyComplete
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\Senai.Rental.WebApi.xml
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fic\Desktop\Ricardo\API-rental\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\netcoreapp3.1\Senai.Rental.WebApi.xml

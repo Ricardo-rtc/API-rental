@@ -10,7 +10,7 @@ namespace Senai.Rental.WebApi.Repositories
 {
     public class AluguelRepository : IAluguelRepository
     {
-        private string stringConexao = "Data Source=DESKTOP-C8POL51\\SQLEXPRESS; initial catalog=M_Rental; user=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=NOTE0113E3\\SQLEXPRESS; initial catalog=M_Rental; user=sa; pwd=Senai@132";
         public void Atualizar(AluguelDomain AluguelAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao)) 

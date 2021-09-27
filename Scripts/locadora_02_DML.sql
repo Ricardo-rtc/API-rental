@@ -1,12 +1,12 @@
 USE M_Rental;
 GO
 
-INSERT INTO Empresas(Nome)
+INSERT INTO Empresas(NomeEmpresa)
 VALUES				('Unidas')
 				   ,('Localiza');
 GO
 
-INSERT INTO Marcas(Nome)
+INSERT INTO Marcas(NomeMarca)
 VALUES			  ('Ford')
 				 ,('GM')
 				 ,('Fiat');

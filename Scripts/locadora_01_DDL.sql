@@ -7,14 +7,14 @@ GO
 CREATE TABLE Empresas 
 (	
     IdEmpresa   INT PRIMARY KEY IDENTITY
-    ,Nome       VARCHAR(200) NOT NULL UNIQUE
+    ,NomeEmpresa       VARCHAR(200) NOT NULL UNIQUE
 );
 GO
 
 CREATE TABLE Marcas
 (
     IdMarca		INT PRIMARY KEY IDENTITY
-    ,Nome		VARCHAR(200) UNIQUE
+    ,NomeMarca		VARCHAR(200) UNIQUE
 );
 GO
 
