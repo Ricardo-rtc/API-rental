@@ -12,8 +12,8 @@ namespace Senai.Rental.WebApi.Domains
         public int IdVeiculo { get; set; }
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
-        public ClienteDomain cliente { get; set; }
-        public VeiculoDomain veiculo { get; set; }
+        public ClienteDomain Cliente { get; set; }
+        public VeiculoDomain Veiculo { get; set; }
 
 
     }

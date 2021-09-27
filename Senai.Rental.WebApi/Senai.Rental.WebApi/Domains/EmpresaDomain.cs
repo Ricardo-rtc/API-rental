@@ -8,6 +8,6 @@ namespace Senai.Rental.WebApi.Domains
     public class EmpresaDomain
     {
         public int IdEmpresa { get; set; }
-        public string Nome { get; set; }
+        public string NomeEmpresa { get; set; }
     }
 }

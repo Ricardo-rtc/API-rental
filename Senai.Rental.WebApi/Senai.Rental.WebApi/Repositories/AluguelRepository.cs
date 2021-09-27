@@ -15,7 +15,7 @@ namespace Senai.Rental.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao)) 
             { 
-                string queryUpdate = "UPDATE Aluguel SET IdVeiculo = @novoVeiculo, IdCliente = @novoCliente, DataInicio = @novaDataR, DataFim = @novaDataD WHERE IdAluguel = @idaluguel;";
+                string queryUpdate = "UPDATE Alugueis SET IdVeiculo = @novoVeiculo, IdCliente = @novoCliente, DataInicio = @novaDataR, DataFim = @novaDataD WHERE IdAluguel = @idaluguel;";
 
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(queryUpdate,con))
@@ -35,7 +35,7 @@ namespace Senai.Rental.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryselectById = "SELECT IdAluguel, Nome, Sobrenome, NomeModelo, DataInicio, DataFim FROM Aluguel INNER JOIN Cliente ON Aluguel.IdCliente = Cliente.IdCliente INNER JOIN Veiculo ON Aluguel.IdVeiculo = Veiculo.IdVeiculo INNER JOIN Modelo ON Veiculo.IdModelo = Modelo.IdModelo WHERE IdAluguel = @idaluguel;";
+                string queryselectById = "SELECT IdAluguel, Nome, Sobrenome, Descricao, DataInicio, DataFim FROM Alugueis INNER JOIN Clientes ON Alugueis.IdCliente = Clientes.IdCliente INNER JOIN Veiculos ON Alugueis.IdVeiculo = Veiculos.IdVeiculo INNER JOIN Modelos ON Veiculos.IdModelo = Modelos.IdModelo WHERE IdAluguel = @idaluguel";
 
                 con.Open();
 
@@ -52,18 +52,18 @@ namespace Senai.Rental.WebApi.Repositories
                         AluguelDomain aluguelBuscado = new AluguelDomain()
                         {
                             IdAluguel = Convert.ToInt32(rdr[0]),
-                            ClienteDomain = new ClienteDomain()
+                            Cliente = new ClienteDomain()
                             {
                                 Nome = rdr[1].ToString(),
                                 Sobrenome = rdr[2].ToString()
                             },
-                            VeiculoDomain = new VeiculoDomain()
+                            Veiculo = new VeiculoDomain()
                             {
-                                ModeloDomain = new ModeloDomain()
+                                Modelo = new ModeloDomain()
                                 {
-                                    NomeModelo = rdr[3].ToString()
+                                    Descricao = rdr[3].ToString()
                                 }
-                                
+
                             },
                             DataInicio = Convert.ToDateTime(rdr[4]),
                             DataFim = Convert.ToDateTime(rdr[5])
@@ -71,24 +71,91 @@ namespace Senai.Rental.WebApi.Repositories
 
                         return aluguelBuscado;
                     }
-                }
+                };
 
                 return null;
             }
+        }
 
         public void Cadastrar(AluguelDomain NovoAluguel)
         {
-            throw new NotImplementedException();
+            using(SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryInsert = "INSERT INTO Aluguel(IdVeiculo,IdCliente,DataInicio,DataFim) VALUES (@novoVeiculo, @novoCliente, @novaDataR, @novaDataD);";
+
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand(queryInsert, con))
+                {
+                    cmd.Parameters.AddWithValue("@novoVeiculo", NovoAluguel.IdVeiculo);
+                    cmd.Parameters.AddWithValue("@novoCliente", NovoAluguel.IdCliente);
+                    cmd.Parameters.AddWithValue("@novaDataR", NovoAluguel.DataInicio);
+                    cmd.Parameters.AddWithValue("@novaDataD", NovoAluguel.DataFim);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void Deletar(int IdDeletar)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryDelete = "DELETE FROM Aluguel WHERE IdAluguel = @idaluguel;";
+
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand(queryDelete, con))
+                {
+                    cmd.Parameters.AddWithValue("@idaluguel", IdDeletar);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public List<AluguelDomain> ListarTodos()
         {
-            throw new NotImplementedException();
+            List<AluguelDomain> ListaAlugueis = new List<AluguelDomain>();
+
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelectAll = "SELECT IdAluguel, Nome, Sobrenome, Descricao,Placa, DataInicio, DataFim FROM Alugueis INNER JOIN Clientes ON Alugueis.IdCliente = Clientes.IdCliente INNER JOIN Veiculos ON Alugueis.IdVeiculo = Veiculos.IdVeiculo INNER JOIN Modelos ON Veiculos.IdModelo = Modelos.IdModelo;";
+
+                con.Open();
+
+                SqlDataReader rdr;
+
+                using(SqlCommand cmd = new SqlCommand(querySelectAll,con))
+                {
+                    rdr = cmd.ExecuteReader();
+
+                    while(rdr.Read())
+                    {
+                        AluguelDomain aluguel = new AluguelDomain()
+                        {
+                            IdAluguel = Convert.ToInt32(rdr[0]),
+                            Cliente = new ClienteDomain()
+                            {
+                                Nome = rdr[1].ToString(),
+                                Sobrenome = rdr[2].ToString()
+                            },
+                            Veiculo = new VeiculoDomain()
+                            {
+                                Modelo = new ModeloDomain()
+                                {
+                                    Descricao = rdr[3].ToString()
+                                },
+                                Placa = rdr[4].ToString()
+                            },
+                            DataInicio = Convert.ToDateTime(rdr[5]),
+                            DataFim = Convert.ToDateTime(rdr[6])
+                        };
+                        ListaAlugueis.Add(aluguel);
+                    }
+                }
+                return ListaAlugueis;
+            }
         }
     }
 }
